@@ -90,6 +90,7 @@ namespace IntroductionToDOTNET
 		}
 		Console.WriteLine();
 #endif // TRIANGLE_2
+
 #if TRIANGLE_3
 		Console.WriteLine("4) TRIANGLE_3");
 		for (int i = 0; i < n; i++)
@@ -100,6 +101,7 @@ namespace IntroductionToDOTNET
 		}
 		Console.WriteLine();
 #endif // TRIANGLE_3
+
 #if TRIANGLE_4
 		Console.WriteLine("5) TRIANGLE_4");
 		for (int i = 0; i < n; i++)
@@ -110,6 +112,7 @@ namespace IntroductionToDOTNET
 		}
 		Console.WriteLine();
 #endif // TRIANGLE_4
+
 #if RHOMBUS
 		Console.WriteLine("6) RHOMBUS");
 			for (int i = 0; i < n * 2; i++)
@@ -124,6 +127,7 @@ namespace IntroductionToDOTNET
 			}
 			Console.WriteLine();
 #endif // RHOMBUS
+
 #if CHESS
 
 			Console.WriteLine("CHESS");
@@ -141,11 +145,12 @@ namespace IntroductionToDOTNET
 
 #if HARD_CHESS
 Console.WriteLine("7) HARDCHESS");
-	Console.Write(" ");
+	Console.Write("┌");
 	for (int i = 1; i < (2 * n * n - n + 1); i++)
 	{
 		Console.Write("-");
 	}
+	Console.Write("┐");
 	Console.WriteLine();
 	int counter = 0;
 	for (int i = 0; i < n; i++)
@@ -209,17 +214,14 @@ Console.WriteLine("7) HARDCHESS");
 			}
 		}
 	}
-	Console.Write(" ");
+	Console.Write("└");
 	for (int i = 1; i < (2 * n * n - n + 1); i++)
 	{
 		Console.Write("-");
 	}
+	Console.Write("┘");
 	Console.WriteLine();
 #endif
-
 		}
-
 	}
-
-
 }
