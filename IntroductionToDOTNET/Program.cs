@@ -1,14 +1,14 @@
 ﻿//IntroductionToDOTNET
-//#define CONSOLE
+#define CONSOLE
 //#define CLASS_WORK
-#define SQUARE
-#define TRIANGLE_1
-#define TRIANGLE_2
-#define TRIANGLE_3
-#define TRIANGLE_4
-#define RHOMBUS
-#define CHESS
-#define HARD_CHESS
+//#define SQUARE
+//#define TRIANGLE_1
+//#define TRIANGLE_2
+//#define TRIANGLE_3
+//#define TRIANGLE_4
+//#define RHOMBUS
+//#define CHESS
+//#define HARD_CHESS
 using System; //#include
 using System.Collections.Generic;
 using System.Linq;
@@ -222,6 +222,8 @@ Console.WriteLine("7) HARDCHESS");
 	Console.Write("┘");
 	Console.WriteLine();
 #endif
+
+
 		}
 	}
 }

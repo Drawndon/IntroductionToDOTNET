@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36603.0 d17.14
+VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroductionToDOTNET", "IntroductionToDOTNET\IntroductionToDOTNET.csproj", "{73225056-5044-496F-945B-8CB5B50ED723}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTypes", "DataTypes\DataTypes.csproj", "{A8A254BA-CA67-48E7-A359-86DFDEB2196B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{42599C45-5981-4AD9-BF33-E117528C1CF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{73225056-5044-496F-945B-8CB5B50ED723}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73225056-5044-496F-945B-8CB5B50ED723}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73225056-5044-496F-945B-8CB5B50ED723}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A254BA-CA67-48E7-A359-86DFDEB2196B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A254BA-CA67-48E7-A359-86DFDEB2196B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A254BA-CA67-48E7-A359-86DFDEB2196B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A254BA-CA67-48E7-A359-86DFDEB2196B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42599C45-5981-4AD9-BF33-E117528C1CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42599C45-5981-4AD9-BF33-E117528C1CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42599C45-5981-4AD9-BF33-E117528C1CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42599C45-5981-4AD9-BF33-E117528C1CF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
