@@ -10,13 +10,13 @@ namespace Calc
 	{
 		static void Main(string[] args)
 		{
-			
+
 
 			do
 			{
 				Console.Write("Введите арифметическое выражение ('q' to quit): ");
 				string expression = Console.ReadLine();
-				if (expression.Contains('q')) { Console.WriteLine($"Bye"); break; }
+				if (expression.Contains('q') || expression.Contains('Q')) { Console.WriteLine("Bye"); break; }
 				expression = expression.Replace(',', '.');
 
 
