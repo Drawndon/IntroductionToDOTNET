@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc", "Calc\Calc.csproj", "{228A9459-BD3D-4EF9-9C8B-9DEB44233D78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc2", "Calc2\Calc2.csproj", "{B07FF48B-3D85-49D3-A487-C46596BCFF1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{228A9459-BD3D-4EF9-9C8B-9DEB44233D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{228A9459-BD3D-4EF9-9C8B-9DEB44233D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{228A9459-BD3D-4EF9-9C8B-9DEB44233D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B07FF48B-3D85-49D3-A487-C46596BCFF1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07FF48B-3D85-49D3-A487-C46596BCFF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07FF48B-3D85-49D3-A487-C46596BCFF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07FF48B-3D85-49D3-A487-C46596BCFF1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
