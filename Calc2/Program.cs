@@ -45,7 +45,8 @@ namespace Calc2
 			}
 			Console.WriteLine();
 
-
+			while (operations.Contains("*") || operations.Contains("/"))
+			{
 				for (int i = 0; i < operations.Length; i++)
 				{
 					if (operations[i] == null) break;
@@ -63,7 +64,9 @@ namespace Calc2
 					}
 					operations[operations.Length - 1] = null;
 				}
-
+			}
+			while (operations.Contains("+") || operations.Contains("-"))
+			{
 				for (int i = 0; i < operations.Length; i++)
 				{
 					if (operations[i] == null) break;
@@ -80,6 +83,8 @@ namespace Calc2
 						for (int j = i; j < operations.Length - 1; j++) operations[j] = operations[j + 1];
 					}
 				}
+			}
+
 			Console.WriteLine(values[0]);
 
 #if CALC_IF
