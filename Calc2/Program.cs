@@ -46,7 +46,41 @@ namespace Calc2
 			Console.WriteLine();
 
 
+				for (int i = 0; i < operations.Length; i++)
+				{
+					if (operations[i] == null) break;
+					else if (operations[i] == "*")
+					{
+						values[i] *= values[i + 1];
+						for (int j = i + 1; j < values.Length - 1; j++) values[j] = values[j + 1];
+						for (int j = i; j < operations.Length - 1; j++) operations[j] = operations[j + 1];
+					}
+					else if (operations[i] == "/")
+					{
+						values[i] /= values[i + 1];
+						for (int j = i + 1; j < values.Length - 1; j++) values[j] = values[j + 1];
+						for (int j = i; j < operations.Length - 1; j++) operations[j] = operations[j + 1];
+					}
+					operations[operations.Length - 1] = null;
+				}
 
+				for (int i = 0; i < operations.Length; i++)
+				{
+					if (operations[i] == null) break;
+					else if (operations[i] == "+")
+					{
+						values[i] += values[i + 1];
+						for (int j = i + 1; j < values.Length - 1; j++) values[j] = values[j + 1];
+						for (int j = i; j < operations.Length - 1; j++) operations[j] = operations[j + 1];
+					}
+					else if (operations[i] == "-")
+					{
+						values[i] -= values[i + 1];
+						for (int j = i + 1; j < values.Length - 1; j++) values[j] = values[j + 1];
+						for (int j = i; j < operations.Length - 1; j++) operations[j] = operations[j + 1];
+					}
+				}
+			Console.WriteLine(values[0]);
 
 #if CALC_IF
 			if (expression.Contains("+"))
