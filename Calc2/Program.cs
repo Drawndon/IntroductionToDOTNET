@@ -21,7 +21,8 @@ namespace Calc2
 		static void Main(string[] args)
 		{
 			Console.Write("Введите арифметическое выражение: ");
-			//string expression = "22*33/44/2*8*3";
+			//expression = "22*33/44/2*8*3";
+			//expression = "5+(1+(2+(22+3)*2+(33-44))/(2+8)*3+1)*2-2";
 			expression = "22+33-44/2+8*3+1";
 			//string expression = Console.ReadLine();
 			expression = expression.Replace(".", ","); //Региональные настройки меняем точку на запятую
@@ -46,37 +47,13 @@ namespace Calc2
 
 			operations = expression.Split(digits);
 			operations = operations.Where(operation => operation != "").ToArray(); //LINQ o => o != "" - это лямбда выражение. Удаляем пустые значения из operations
-			for (int i = 0; i < operations.Length; i++)
-			{
-				Console.Write($"{operations[i]}\t");
-			}
-			Console.WriteLine();
+																				   //for (int i = 0; i < operations.Length; i++)
+																				   //{
+																				   //	Console.Write($"{operations[i]}\t");
+																				   //}
+																				   //Console.WriteLine();
+			Console.WriteLine(Calculate(expression));
 
-			while (operations[0] != "")
-			{
-				for (int i = 0; i < operations.Length; i++)
-				{
-					if (operations[i] == "*" || operations[i] == "/")
-					{
-						if (operations[i] == "*") values[i] *= values[i + 1];
-						if (operations[i] == "/") values[i] /= values[i + 1];
-						Shift(i);
-						if (operations[i] == "*" || operations[i] == "/") i--;
-					}
-				}
-
-				for (int i = 0; i < operations.Length; i++)
-				{
-					if (operations[i] == "+" || operations[i] == "-")
-					{
-						if (operations[i] == "+") values[i] += values[i + 1];
-						if (operations[i] == "-") values[i] -= values[i + 1];
-						Shift(i);
-						if (operations[i] == "+" || operations[i] == "-") i--;
-					}
-				}
-			}
-			Console.WriteLine(values[0]);
 
 #if CALC_IF
 			if (expression.Contains("+"))
@@ -108,6 +85,35 @@ namespace Calc2
 			} 
 #endif
 
+		}
+		static double Calculate(string expression)
+		{
+			while (operations[0] != "")
+			{
+				for (int i = 0; i < operations.Length; i++)
+				{
+					if (operations[i] == "*" || operations[i] == "/")
+					{
+						if (operations[i] == "*") values[i] *= values[i + 1];
+						if (operations[i] == "/") values[i] /= values[i + 1];
+						Shift(i);
+						if (operations[i] == "*" || operations[i] == "/") i--;
+					}
+				}
+
+				for (int i = 0; i < operations.Length; i++)
+				{
+					if (operations[i] == "+" || operations[i] == "-")
+					{
+						if (operations[i] == "+") values[i] += values[i + 1];
+						if (operations[i] == "-") values[i] -= values[i + 1];
+						Shift(i);
+						if (operations[i] == "+" || operations[i] == "-") i--;
+					}
+				}
+			}
+			//Console.WriteLine(values[0]);
+			return values[0];
 		}
 		static void Shift(int index)
 		{
