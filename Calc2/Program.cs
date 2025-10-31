@@ -90,27 +90,8 @@ namespace Calc2
 		{
 			while (operations[0] != "")
 			{
-				for (int i = 0; i < operations.Length; i++)
-				{
-					if (operations[i] == "*" || operations[i] == "/")
-					{
-						if (operations[i] == "*") values[i] *= values[i + 1];
-						if (operations[i] == "/") values[i] /= values[i + 1];
-						Shift(i);
-						if (operations[i] == "*" || operations[i] == "/") i--;
-					}
-				}
-
-				for (int i = 0; i < operations.Length; i++)
-				{
-					if (operations[i] == "+" || operations[i] == "-")
-					{
-						if (operations[i] == "+") values[i] += values[i + 1];
-						if (operations[i] == "-") values[i] -= values[i + 1];
-						Shift(i);
-						if (operations[i] == "+" || operations[i] == "-") i--;
-					}
-				}
+				MulDiv();
+				AddSub();
 			}
 			//Console.WriteLine(values[0]);
 			return values[0];
@@ -122,6 +103,32 @@ namespace Calc2
 			operations[operations.Length - 1] = "";
 			values[values.Length - 1] = 0;
 		}
+		static void MulDiv()
+		{
+			for (int i = 0; i < operations.Length; i++)
+			{
+				if (operations[i] == "*" || operations[i] == "/")
+				{
+					if (operations[i] == "*") values[i] *= values[i + 1];
+					else values[i] /= values[i + 1];
+					Shift(i--);
+				}
+			}
+		}
+		static void AddSub()
+		{
+			for (int i = 0; i < operations.Length; i++)
+			{
+				if (operations[i] == "+" || operations[i] == "-")
+				{
+					if (operations[i] == "+") values[i] += values[i + 1];
+					else values[i] -= values[i + 1];
+					Shift(i--);
+				}
+			}
+		}
+
+
 	}
 }
 
